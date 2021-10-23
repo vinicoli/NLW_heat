@@ -32,16 +32,19 @@
           </span>
 
           <img
+            id="userProfilePhoto"
             src="https://lorempixel.com/185/185/people/"
             alt="Foto de perfil"
           />
         </div>
         <h1 id="userName">Vinicius Oliveira</h1>
-        <a href="https://github.com/vinicoli" target="_blank">
+        <a id="userLink" href="https://github.com/vinicoli" target="_blank">
           <img src="images/github 2.svg" alt="icone github" />
-          vinicoli
+          <span id="userLogin">vinicoli</span>
         </a>
-        <p>An instructor focused on helping people start programing for web</p>
+        <p id="userBio">
+          An instructor focused on helping people start programing for web
+        </p>
 
         <ul id="socialMediaLinks">
           <li class="youtube">
@@ -68,26 +71,6 @@
       </div>
     </main>
 
-    <script>
-      const userSocialMedia = {
-        github: 'vinicoli',
-        youtube: '',
-        facebook: 'Vinicoli',
-        instagram: 'vini.coli',
-        twitter: 'Vinicoli'
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialMediaLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${userSocialMedia[social]}`
-
-          alert(li.children[0].href)
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
